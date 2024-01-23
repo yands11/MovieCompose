@@ -1,6 +1,7 @@
 package com.dot2line.moviecompose.domain.model
 
 enum class Genre {
+    NONE,
     ACTION,
     ADVENTURE,
     ANIMATION,
