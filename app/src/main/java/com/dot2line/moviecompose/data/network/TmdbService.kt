@@ -4,7 +4,7 @@ import com.dot2line.moviecompose.data.model.DiscoverResult
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-interface TmdbApi {
+interface TmdbService {
 
     @GET("discover/movie")
     suspend fun discoverMovie(

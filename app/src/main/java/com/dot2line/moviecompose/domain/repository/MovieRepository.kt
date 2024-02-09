@@ -6,4 +6,5 @@ import com.dot2line.moviecompose.domain.model.Movie
 interface MovieRepository {
 
     suspend fun getMovies(genre: Genre): List<Movie>
+
 }
