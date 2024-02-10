@@ -7,6 +7,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import retrofit2.Converter
 import retrofit2.Retrofit
 import javax.inject.Singleton
@@ -22,7 +23,7 @@ object NetworkModule {
     @Provides
     fun provideConverterFactory(): Converter.Factory =
         Json { ignoreUnknownKeys = true }
-            .asConverterFactory(MediaType.parse("application/json")!!)
+            .asConverterFactory("application/json".toMediaTypeOrNull()!!)
 
     @Provides
     @Singleton

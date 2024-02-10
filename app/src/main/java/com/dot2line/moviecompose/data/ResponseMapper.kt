@@ -61,7 +61,7 @@ fun MovieResult.toMovie(): Movie = Movie(
     id = id,
     title = Title(original = originalTitle, translated = title),
     overview = overview,
-    posterImgUrl = "https://media.themoviedb.org/t/p/w440_and_h660_face${posterPath}",
+    posterImgUrl = "https://image.tmdb.org/t/p/w500${posterPath}",
     vote = Vote(voteAverage, voteCount),
     genres = genres.map { it.toGenre() },
     releaseDate = SimpleDateFormat("yyyy-MM-dd").parse(releaseDate),
